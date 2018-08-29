@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+
+	<section>
+		<form name="calc" action="" id="frmcalc">
+			<label for="numero1">Numero 1</label>
+			<input id="numero1" placeholder="#1" type="numeric" name="variable1">
+		
+			<label for="numero2">Numero 2</label>
+			<input id="numero2" placeholder="#2" type="numeric" name="variable2">
+
+			<select id="operaciones">
+				<option value="">Operacion</option>
+				<option value="1">Suma</option>
+  				<option value="2">Resta</option>
+ 				<option value="3">Multiplicación</option>
+  				<option value="4">División</option>
+			</select>
+
+			<button id="btm" value="operacion" onclick="operar()">Operar</button> 
+
+			<br/><br/><br/>
+				<label>Resultado:</label>
+				<input type="text" id="rst" value="" disabled="true" />
+
+				
+			
+		
+
+		</form>
+			
+		
+		
+		</section>
+
+	<script type="text/javascript">
+		
+		
+
+		function suma(n1,n2){
+			return n1+n2; 
+		}
+
+		function resta(n1,n2){
+			return n1-n2; 
+		}
+		function divi(n1,n2){
+			return n1/n2; 
+		}
+		function multi(n1,n2){
+			return n1*n2; 
+		}
+
+
+		function operar(){
+
+			var vr1 = document.getElementById("numero1").value;
+			var vr2 = document.getElementById("numero2").value;
+			var opr = document.getElementById("operaciones");
+			var rst = "";
+
+			if (operaciones.value=="1") {
+				var sumar= suma(parseInt(vr1),parseInt(vr2));
+				rst = sumar;
+			}
+
+			document.getElementById("rst").value=rst;
+		}
+	</script>
+</body>
+</html>
